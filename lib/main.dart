@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({Key key}) : super(key: key);
+
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -18,9 +19,9 @@ class MyApp extends StatelessWidget {
       ),
       home: Scaffold(
         appBar: AppBar(
-          title: Text('MyApp'),
+          title: const Text('MyApp'),
         ),
-        body: MyHomePage(),
+        body: const MyHomePage(),
       ),
       debugShowCheckedModeBanner: false,
     );
@@ -28,6 +29,8 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatefulWidget {
+  const MyHomePage({Key key}) : super(key: key);
+
   @override
   State<MyHomePage> createState() => _MyHomePageState();
 }
@@ -51,7 +54,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       onPrimary: Colors.black87,
                       primary: const Color.fromARGB(255, 250, 250, 250),
                       // minimumSize: const Size.fromHeight(30),
-                      fixedSize: Size(double.infinity, 3),
+                      fixedSize: const Size(double.infinity, 3),
                       padding: const EdgeInsets.symmetric(horizontal: 16),
                       shape: const RoundedRectangleBorder(
                         borderRadius: BorderRadius.all(Radius.circular(2)),
@@ -63,7 +66,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     child: const Text("PERTANDINGAN HARI INI"),
                     style: ElevatedButton.styleFrom(
                       onPrimary: Colors.black87,
-                      primary: Color.fromARGB(255, 250, 250, 250),
+                      primary: const Color.fromARGB(255, 250, 250, 250),
                       minimumSize: const Size(88, 36),
                       padding: const EdgeInsets.symmetric(horizontal: 16),
                       shape: const RoundedRectangleBorder(
@@ -87,35 +90,34 @@ class _MyHomePageState extends State<MyHomePage> {
                     ],
                   ),
                   Container(
-                  height: 40,
-                  
-                  child: 
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        'Lagi, MU imbang lawan jalur degradasi',
-                        style: GoogleFonts.roboto(
-                          fontSize: 20.0,
-                          fontWeight: FontWeight.w500,
+                    height: 40,
+                    child: 
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          'Lagi, MU imbang lawan jalur degradasi',
+                          style: GoogleFonts.roboto(
+                            fontSize: 20.0,
+                            fontWeight: FontWeight.w500,
+                          ),
                         ),
-                      ),
-                    ],
-                  ),
+                      ],
+                    ),
                   ),
                   Container(
-                    decoration: BoxDecoration(color: Colors.amber),
+                    decoration: const BoxDecoration(color: Colors.amber),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Text('Transfer'),
+                        const Text('Transfer'),
                       ],
                     ),
                   )
                 ]),
               ),
               Container(
-                margin: EdgeInsets.only(top: 10),
+                margin: const EdgeInsets.only(top: 10),
                 decoration: BoxDecoration(
                   border: Border.all(color: Colors.green, width: 3),
                 ),
@@ -132,7 +134,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           ),
                         ),
                       ),
-                      Padding(padding: EdgeInsets.all(10), child: 
+                      const Padding(padding: EdgeInsets.all(10), child: 
                         Expanded(
                           child: Text(
                           'RESMI: Taipan Rusia Roman Abramovich Lepas \nChelsea'
@@ -142,15 +144,15 @@ class _MyHomePageState extends State<MyHomePage> {
                     ],
                   ),
                   Container(
-                  padding: EdgeInsets.all(10),
+                  padding: const EdgeInsets.all(10),
                   decoration: BoxDecoration(
                     border: Border.all(color: Colors.green, width: 3),
                   ),
                   child: Row(
                     children: [
-                      Text('Barcelona'),
-                      Text(',  '),
-                      Text('Feb 13 2022'),
+                      const Text('Barcelona'),
+                      const Text(',  '),
+                      const Text('Feb 13 2022'),
                     ],
                   ),
                   ),
@@ -158,7 +160,7 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
 
               Container(
-                margin: EdgeInsets.only(top: 10),
+                margin: const EdgeInsets.only(top: 10),
                 decoration: BoxDecoration(
                   border: Border.all(color: Colors.green, width: 3),
                 ),
@@ -175,7 +177,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           ),
                         ),
                       ),
-                      Padding(padding: EdgeInsets.all(10), child: 
+                      const Padding(padding: EdgeInsets.all(10), child: 
                         Expanded(
                           child: Text(
                           'RESMI: Taipan Rusia Roman Abramovich Lepas \nChelsea'
@@ -185,15 +187,15 @@ class _MyHomePageState extends State<MyHomePage> {
                     ],
                   ),
                   Container(
-                  padding: EdgeInsets.all(10),
+                  padding: const EdgeInsets.all(10),
                   decoration: BoxDecoration(
                     border: Border.all(color: Colors.green, width: 3),
                   ),
                   child: Row(
                     children: [
-                      Text('Barcelona'),
-                      Text(',  '),
-                      Text('Feb 13 2022'),
+                      const Text('Barcelona'),
+                      const Text(',  '),
+                      const Text('Feb 13 2022'),
                     ],
                   ),
                   ),
