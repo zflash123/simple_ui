@@ -184,12 +184,18 @@ class _MyHomePageState extends State<MyHomePage> {
                       ),
                     ],
                   ),
-                  Row(
+                  Container(
+                  padding: EdgeInsets.all(10),
+                  decoration: BoxDecoration(
+                    border: Border.all(color: Colors.green, width: 3),
+                  ),
+                  child: Row(
                     children: [
                       Text('Barcelona'),
                       Text(',  '),
                       Text('Feb 13 2022'),
                     ],
+                  ),
                   ),
                 ]),
               )
